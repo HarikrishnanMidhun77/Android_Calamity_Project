@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "485778216938",
+    "firebase_url": "https://natural-calamity-helper.firebaseio.com",
+    "project_id": "natural-calamity-helper",
+    "storage_bucket": "natural-calamity-helper.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:485778216938:android:92107e7e320b9622",
+        "android_client_info": {
+          "package_name": "com.example.nexus_max.project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "485778216938-v0aiduc814aq8rstqrgdi4dsgb7dc4jr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nexus_max.project",
+            "certificate_hash": "9dbcf725a7cad3ac38b54dc50e20fc3b8a8e0864"
+          }
+        },
+        {
+          "client_id": "485778216938-nf50sca7fbmik5d67heeiht6e0uu7b2g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_SXR3eg0XAsqYryaKEyyFjW2Yq7dgHrc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "485778216938-nf50sca7fbmik5d67heeiht6e0uu7b2g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

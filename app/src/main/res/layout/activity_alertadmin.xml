@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".alertadmin">
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="111dp"
+        android:layout_height="31dp"
+        android:layout_alignEnd="@+id/textView28"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="68dp"
+        android:text="District:"
+        android:textColor="#fe124406"
+        android:textSize="18sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="105dp"
+        android:layout_height="29dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="183dp"
+        android:text="Alert:"
+        android:textColor="#fe124406"
+        android:textSize="18sp"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/button23"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="19dp"
+        android:layout_marginEnd="0dp"
+        android:background="#fe124406"
+        android:text="DONE"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold|italic" />
+
+    <EditText
+        android:id="@+id/editText29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView27"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="13dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editText30"
+        android:layout_width="wrap_content"
+        android:layout_height="213dp"
+        android:layout_alignStart="@+id/editText29"
+        android:layout_alignTop="@+id/textView28"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:textColor="#890e5016" />
+</RelativeLayout>

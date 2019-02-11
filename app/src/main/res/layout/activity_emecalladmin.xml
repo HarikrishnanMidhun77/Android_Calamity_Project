@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".emecalladmin">
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="145dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="62dp"
+        android:text="Department:"
+        android:textColor="#fe124406"
+        android:textSize="18sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="143dp"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/textView23"
+        android:layout_marginTop="216dp"
+        android:text="Emergency no:"
+        android:textColor="#fe124406"
+        android:textSize="18sp"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/button19"
+        android:layout_width="383dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="110dp"
+        android:layout_marginStart="-163dp"
+        android:layout_toEndOf="@+id/textView23"
+        android:background="#fe124406"
+        android:text="OK"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold|italic" />
+
+    <EditText
+        android:id="@+id/editText22"
+        android:layout_width="172dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView23"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editText23"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView24"
+        android:layout_alignEnd="@+id/editText22"
+        android:ems="10"
+        android:inputType="textPersonName" />
+</RelativeLayout>
