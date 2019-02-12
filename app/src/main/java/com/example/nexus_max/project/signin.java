@@ -70,7 +70,7 @@ dbUsers= FirebaseDatabase.getInstance().getReference("Users");
         btn_signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                addUser();
+
                 String email=et_email.getText().toString();
                 String password=et_pswd.getText().toString();
                 String password2=et_conf_pswd.getText().toString();
@@ -80,10 +80,11 @@ dbUsers= FirebaseDatabase.getInstance().getReference("Users");
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
+                                        addUser();
                                         // Sign in success, update UI with the signed-in user's information
                                         Log.d(TAG, "createUserWithEmail:success");
                                         FirebaseUser user = mAuth.getCurrentUser();
-                                        Intent intent = new Intent(signin.this, Main_menu.class);
+                                        Intent intent = new Intent(signin.this, otp.class);
                                         startActivity(intent);
                                         // updateUI(user);
                                     } else {
@@ -122,7 +123,7 @@ dbUsers= FirebaseDatabase.getInstance().getReference("Users");
     String uid=dbUsers.push().getKey();
     User user=new User(uid,emailid,phno,pswd,uname,place);
     dbUsers.child(uid).setValue(user);
-    Toast.makeText(signin.this,"Welcome!",Toast.LENGTH_LONG).show();
+    Toast.makeText(signin.this,"OTP sent !",Toast.LENGTH_LONG).show();
  }
  else{
      Toast.makeText(signin.this,"All fields must be filled!", Toast.LENGTH_LONG).show();
