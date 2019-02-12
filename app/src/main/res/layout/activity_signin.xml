@@ -10,7 +10,7 @@
     <TextView
         android:id="@+id/textView3"
         android:layout_width="157dp"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="33dp"
@@ -33,11 +33,11 @@
     <TextView
         android:id="@+id/textView5"
         android:layout_width="142dp"
-        android:layout_height="37dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/textView3"
         android:layout_marginTop="157dp"
-        android:text="Password             :"
+        android:text="Password        (minimum 6 characters)"
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -93,7 +93,7 @@
     <EditText
         android:id="@+id/et_signin_name"
         android:layout_width="160dp"
-        android:layout_height="34dp"
+        android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView8"
         android:layout_alignStart="@+id/et_signin_place"
         android:ems="10"
@@ -102,7 +102,7 @@
     <EditText
         android:id="@+id/et_signin_place"
         android:layout_width="162dp"
-        android:layout_height="32dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignTop="@+id/textView9"
         android:layout_marginEnd="17dp"
@@ -112,7 +112,7 @@
     <EditText
         android:id="@+id/et_signin_pswd"
         android:layout_width="162dp"
-        android:layout_height="35dp"
+        android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView5"
         android:layout_alignStart="@+id/et_signin_name"
         android:ems="10"
@@ -121,7 +121,7 @@
     <EditText
         android:id="@+id/et_signin_confpswd"
         android:layout_width="164dp"
-        android:layout_height="31dp"
+        android:layout_height="wrap_content"
         android:layout_alignStart="@+id/et_signin_name"
         android:layout_alignTop="@+id/textView7"
         android:ems="10"
@@ -130,7 +130,7 @@
     <EditText
         android:id="@+id/et_signin_phone"
         android:layout_width="161dp"
-        android:layout_height="35dp"
+        android:layout_height="wrap_content"
         android:layout_alignStart="@+id/et_signin_name"
         android:layout_alignTop="@+id/textView3"
         android:ems="10"
@@ -139,7 +139,7 @@
     <EditText
         android:id="@+id/et_signin_email"
         android:layout_width="160dp"
-        android:layout_height="34dp"
+        android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView4"
         android:layout_alignEnd="@+id/et_signin_name"
         android:ems="10"
