@@ -43,13 +43,14 @@ EditText et_otp;
       btn_resend.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View v) {
+              et_otp.setText("");
               readOtp();
           }
       });
     }
     private void readOtp(){
         Random r = new Random();
-        final int rno = r.nextInt(100000 - 999999) + 999999;
+        final int rno = r.nextInt(999999 - 100000) + 100000;
         mHandler.postDelayed(new Thread() {
             @Override
             public void run() {

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.nexus_max.project">
+
     <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,7 +22,7 @@
         <activity android:name=".signin" />
         <activity android:name=".option" />
         <activity android:name=".messages" />
-        <activity android:name=".REPLAY" />
+        <activity android:name=".Reply" />
         <activity android:name=".SHARE" />
         <activity android:name=".precautionadmin" />
         <activity android:name=".donationreg" />
@@ -37,7 +39,9 @@
         <activity android:name=".camplogin" />
         <activity android:name=".otp" />
         <activity android:name=".firstt" />
-        <activity android:name=".Main_menu"></activity>
+        <activity android:name=".Main_menu" />
+        <activity android:name=".PrecTitles" />
+        <activity android:name=".PrecView"></activity>
     </application>
 
 </manifest>

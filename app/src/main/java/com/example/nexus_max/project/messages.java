@@ -47,6 +47,6 @@ ListView msgListView;
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
-        })
+        });
     }
 }

@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">PROJECT</string>
     <array name="calamities">
-        <item> Flood </item>
-        <item> wildfire </item>
-        <item> tsunami </item>
-        <item> tornado </item>
+        <item>Flood</item>
+        <item>wildfire</item>
+        <item>tsunami</item>
+        <item>tornado</item>
     </array>
 </resources>

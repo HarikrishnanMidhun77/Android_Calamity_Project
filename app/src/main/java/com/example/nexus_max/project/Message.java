@@ -15,6 +15,7 @@ public Message(){
         this.from_email = from_email;
     }
 
+
     public String getMid() {
         return mid;
     }
