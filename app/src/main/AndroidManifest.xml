@@ -41,7 +41,12 @@
         <activity android:name=".firstt" />
         <activity android:name=".Main_menu" />
         <activity android:name=".PrecTitles" />
-        <activity android:name=".PrecView"></activity>
+        <activity android:name=".PrecView" />
+        <activity android:name=".DonView" />
+        <activity
+            android:name=".Notif"
+            android:label="@string/title_activity_notif"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

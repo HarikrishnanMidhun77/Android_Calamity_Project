@@ -60,7 +60,8 @@ btn_rel_camp.setOnClickListener(new View.OnClickListener() {
 btn_don.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-
+        Intent intent = new Intent(firstt.this, donationreg.class);
+        startActivity(intent);
     }
 });
 btn_forg_pswd.setOnClickListener(new View.OnClickListener() {

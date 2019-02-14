@@ -28,7 +28,7 @@ public class PrecTitles extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prec_titles);
         pList=new ArrayList<>();
-        precListView=(ListView)findViewById(R.id.ls_msg);
+        precListView=(ListView)findViewById(R.id.ls_prec_t);
         dbPrec= FirebaseDatabase.getInstance().getReference("Precautions");
 
         precListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -65,6 +65,6 @@ public class PrecTitles extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
-        })
+        });
     }
 }

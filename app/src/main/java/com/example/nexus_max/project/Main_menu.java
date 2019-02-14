@@ -33,7 +33,7 @@ public class Main_menu extends AppCompatActivity {
         btn_prec.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Main_menu.this, Main_menu.class);
+                Intent intent = new Intent(Main_menu.this, PrecTitles.class);
                 startActivity(intent);
             }
         });
@@ -41,7 +41,7 @@ public class Main_menu extends AppCompatActivity {
         btn_notif.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Main_menu.this, Main_menu.class);
+                Intent intent = new Intent(Main_menu.this, Notif.class);
                 startActivity(intent);
             }
         });

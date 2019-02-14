@@ -1,5 +1,6 @@
 package com.example.nexus_max.project;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -33,6 +34,8 @@ Button btn_trans;
             @Override
             public void onClick(View v) {
                 sendDon();
+                Intent intent=new Intent(donationreg.this,DonView.class);
+                startActivity(intent);
             }
         });
 
