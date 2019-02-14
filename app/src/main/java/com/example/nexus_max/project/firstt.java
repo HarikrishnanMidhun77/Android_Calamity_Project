@@ -19,6 +19,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.util.Arrays;
+
 public class firstt extends AppCompatActivity {
     private FirebaseAuth mAuth;
     Button user_login_btn;
@@ -29,7 +31,8 @@ public class firstt extends AppCompatActivity {
     EditText user_name_login;
     EditText user_password_login;
     boolean doubleBackToExitPressedOnce = false;
-
+    String[] adminEmailIds={"admin@gmail.com", "admin123@gmail.com"};
+    String[] adminPasswords={"admin123","123456"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,8 +44,11 @@ public class firstt extends AppCompatActivity {
         btn_don=(Button)findViewById(R.id.btn_don) ;
         btn_forg_pswd=(Button)findViewById(R.id.btn_forg_pswd) ;
         user_login_btn= (Button)findViewById(R.id.btn_user_login);
+
         user_name_login=(EditText)findViewById(R.id.et_uname_login);
         user_password_login=(EditText)findViewById(R.id.et_upswd_login);
+
+
 
 btn_signup.setOnClickListener(new View.OnClickListener() {
     @Override
@@ -74,19 +80,25 @@ btn_forg_pswd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                String email=user_name_login.getText().toString();
-                String password=user_password_login.getText().toString();
+                String email = user_name_login.getText().toString();
+                String password = user_password_login.getText().toString();
+
+                if (Arrays.asList(adminEmailIds).contains(email) && Arrays.asList(adminPasswords).contains(password)) {
+                    Intent intent = new Intent(firstt.this, AdminDash.class);
+                    startActivity(intent);
+
+                } else {
                 mAuth.signInWithEmailAndPassword(email, password)
                         .addOnCompleteListener(firstt.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
                                     // Sign in success, update UI with the signed-in user's information
-                                  //  Log.d(TAG, "signInWithEmail:success");
+                                    //  Log.d(TAG, "signInWithEmail:success");
                                     FirebaseUser user = mAuth.getCurrentUser();
                                     Intent intent = new Intent(firstt.this, Main_menu.class);
                                     startActivity(intent);
-                                   // updateUI(user);
+                                    // updateUI(user);
                                 } else {
                                     // If sign in fails, display a message to the user.
                                     Log.w("first", "signInWithEmail:failure", task.getException());
@@ -98,6 +110,7 @@ btn_forg_pswd.setOnClickListener(new View.OnClickListener() {
                                 // ...
                             }
                         });
+            }
             }
         });
 

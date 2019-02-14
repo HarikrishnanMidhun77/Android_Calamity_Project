@@ -50,7 +50,7 @@ public class MsgList extends ArrayAdapter<Message> {
         btn_share.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String shareBody = "Emergency!! There is "+message.getCalam()+"in "+message.getLoc()+". "+message.getUname()+" is in trouble! Please Help!";
+                String shareBody = "Emergency!! There is "+message.getCalam()+" in "+message.getLoc()+". "+message.getUname()+" is in trouble! Please Help!";
                 Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
                 sharingIntent.setType("text/plain");
                 sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");

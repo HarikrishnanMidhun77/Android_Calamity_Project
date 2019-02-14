@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminDash">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            >
+            <Button
+                android:id="@+id/btn_main_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1"
+                android:background="#fe124406"
+                android:text="Camp"
+                android:textColor="#ffffff"
+                />
+            <Button
+                android:id="@+id/btn_main_prec"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#fe124406"
+                android:text="Precautions"
+                android:layout_weight="1"
+                android:textColor="#ffffff"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="3"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/btn_main_camp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#fe124406"
+                android:text="Weather"
+                android:textColor="#ffffff"
+                />
+
+            <Button
+                android:id="@+id/btn_main_notif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#fe124406"
+                android:text="News"
+                android:textColor="#ffffff"
+                />
+            <Button
+                android:id="@+id/btn_aDash_alert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#fe124406"
+                android:text="Alert"
+                android:textColor="#ffffff"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/btn_main_feedb"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1"
+                android:background="#fe124406"
+                android:text="Feedback"
+                android:textColor="#ffffff"
+                />
+
+            <Button
+                android:id="@+id/btn_main_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#fe124406"
+                android:text="Logout"
+                android:textColor="#ffffff"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
