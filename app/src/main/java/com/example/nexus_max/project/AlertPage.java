@@ -20,9 +20,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AlertPage extends Fragment{
-    ListView listViewWeather;
-    DatabaseReference dbWeath;
-    List<Weather> wList;
+    ListView listViewAlert;
+    DatabaseReference dbAlert;
+    List<Alert> wList;
     private Activity context;
     public AlertPage(){
        context= this.getActivity();
@@ -32,23 +32,23 @@ public class AlertPage extends Fragment{
     public View onCreateView(@NonNull LayoutInflater inflater,  ViewGroup container, Bundle savedInstanceState) {
         View view= inflater.inflate(R.layout.activity_alert_page,container,false);
         wList=new ArrayList<>();
-        listViewWeather=(ListView)view.findViewById(R.id.ls_alert);
-        dbWeath= FirebaseDatabase.getInstance().getReference("Alerts");
+        listViewAlert=(ListView)view.findViewById(R.id.ls_alert);
+        dbAlert= FirebaseDatabase.getInstance().getReference("Alerts");
         return view;
     }
 
     @Override
     public void onStart() {
         super.onStart();
-        dbWeath.addValueEventListener(new ValueEventListener() {
+        dbAlert.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 wList.clear();
                 for(DataSnapshot msgSnap:dataSnapshot.getChildren()){
-                    Weather msg=msgSnap.getValue(Weather.class);
+                    Alert msg=msgSnap.getValue(Alert.class);
                     wList.add(msg);
-                    WeatherList adapter =new WeatherList(context,wList);
-                    listViewWeather.setAdapter(adapter);
+                    AlertList adapter =new AlertList(getActivity(),wList);
+                    listViewAlert.setAdapter(adapter);
 
                 }
             }

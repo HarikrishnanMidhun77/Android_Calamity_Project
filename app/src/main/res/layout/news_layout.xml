@@ -50,8 +50,10 @@
                 android:ems="10"
                 android:paddingTop="10sp"
                 android:paddingBottom="10sp"
+                android:background="@null"
                 android:layout_marginTop="10sp"
-                android:inputType="none" />
+                android:inputType="none"
+                android:editable="false"/>
         </LinearLayout>
 
     </LinearLayout>

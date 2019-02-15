@@ -47,7 +47,7 @@ public class NewsPage extends Fragment{
                 for(DataSnapshot msgSnap:dataSnapshot.getChildren()){
                     News msg=msgSnap.getValue(News.class);
                     nList.add(msg);
-                    NewsList adapter =new NewsList(context,nList);
+                    NewsList adapter =new NewsList(getActivity(),nList);
                     listViewNews.setAdapter(adapter);
 
                 }

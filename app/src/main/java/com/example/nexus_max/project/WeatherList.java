@@ -26,14 +26,14 @@ public class WeatherList extends ArrayAdapter {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         LayoutInflater inflater=context.getLayoutInflater();
-        View listViewItem= inflater.inflate(R.layout.weather_layout,null,true);
+        View listViewItem= inflater.from(context).inflate(R.layout.weather_layout,null,true);
 
         TextView txt_dist=(TextView)listViewItem.findViewById(R.id.txt_w_dist);
         TextView txt_dc=(TextView)listViewItem.findViewById(R.id.txt_w_dc);
 
         weather=wList.get(position);
         txt_dist.setText(weather.getDist());
-        txt_dc.setText(weather.getDc());
+        txt_dc.setText(weather.getDc()+" *C");
         return listViewItem;
     }
     }

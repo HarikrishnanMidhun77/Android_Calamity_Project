@@ -24,7 +24,7 @@ EditText et_Acalam,et_Aprec;
         et_Acalam=(EditText)findViewById(R.id.et_aCalam_calam);
         et_Aprec=(EditText)findViewById(R.id.et_aCalam_prec);
 
-        dbPrec= FirebaseDatabase.getInstance().getReference("Precaution");
+        dbPrec= FirebaseDatabase.getInstance().getReference("Precautions");
 
         btn_sub.setOnClickListener(new View.OnClickListener() {
             @Override

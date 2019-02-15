@@ -1,5 +1,6 @@
 package com.example.nexus_max.project;
 
+import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -144,8 +145,8 @@ public class Notif extends AppCompatActivity {
                     WeatherPage weatherPage=new WeatherPage();
                     return weatherPage;
                 case 1:
-                    NewsPage newsPage=new NewsPage();
-                    return newsPage;
+                NewsPage newsPage=new NewsPage();
+                return newsPage;
                 case 2:
                     AlertPage alertPage=new AlertPage();
                     return alertPage;
@@ -159,6 +160,22 @@ public class Notif extends AppCompatActivity {
         public int getCount() {
             // Show 3 total pages.
             return 3;
+        }
+
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+           switch (position){
+               case 0:
+                   return "Weather";
+               case 1:
+                   return "News";
+               case 2:
+                   return "Alerts";
+                   default:
+                       return "anitCalamity";
+
+           }
         }
     }
 }

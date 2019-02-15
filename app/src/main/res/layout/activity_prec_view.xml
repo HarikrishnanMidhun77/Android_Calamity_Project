@@ -28,7 +28,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="none" />
+            android:inputType="none"
+            android:background="@null"
+            android:editable="false"/>
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

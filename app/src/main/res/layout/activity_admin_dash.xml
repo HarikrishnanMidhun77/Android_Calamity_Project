@@ -18,7 +18,7 @@
             android:layout_weight="1"
             >
             <Button
-                android:id="@+id/btn_main_msg"
+                android:id="@+id/btn_aDash_camp"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
 
@@ -28,7 +28,7 @@
                 android:textColor="#ffffff"
                 />
             <Button
-                android:id="@+id/btn_main_prec"
+                android:id="@+id/btn_aDash_prec"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="#fe124406"
@@ -48,7 +48,7 @@
             android:layout_weight="1">
 
             <Button
-                android:id="@+id/btn_main_camp"
+                android:id="@+id/btn_aDash_weath"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -58,7 +58,7 @@
                 />
 
             <Button
-                android:id="@+id/btn_main_notif"
+                android:id="@+id/btn_aDash_news"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -86,7 +86,7 @@
             android:layout_weight="1">
 
             <Button
-                android:id="@+id/btn_main_feedb"
+                android:id="@+id/btn_aDash_feedb"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
 
@@ -97,7 +97,7 @@
                 />
 
             <Button
-                android:id="@+id/btn_main_logout"
+                android:id="@+id/btn_aDash_logout"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"

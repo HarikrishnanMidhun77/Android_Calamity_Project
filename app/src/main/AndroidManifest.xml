@@ -48,7 +48,10 @@
             android:label="@string/title_activity_notif"
             android:theme="@style/AppTheme" />
         <activity android:name=".AdminCalamEntry" />
-        <activity android:name=".AdminDash"></activity>
+        <activity android:name=".AdminDash" />
+        <activity android:name=".AdminWeatherEntry" />
+        <activity android:name=".AdminNewsEntry" />
+        <activity android:name=".AdminAlertEntry"></activity>
     </application>
 
 </manifest>

@@ -66,6 +66,8 @@ public class Main_menu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(Main_menu.this, firstt.class);
+                startActivity(intent);
             }
         });
     }

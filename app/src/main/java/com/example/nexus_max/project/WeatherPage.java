@@ -23,7 +23,7 @@ public class WeatherPage extends Fragment{
     ListView listViewWeather;
     DatabaseReference dbWeath;
     List<Weather> wList;
-    private Activity context;
+    public Activity context;
     public WeatherPage(){
        context= this.getActivity();
     }
@@ -47,8 +47,11 @@ public class WeatherPage extends Fragment{
                 for(DataSnapshot msgSnap:dataSnapshot.getChildren()){
                     Weather msg=msgSnap.getValue(Weather.class);
                     wList.add(msg);
-                    WeatherList adapter =new WeatherList(context,wList);
-                    listViewWeather.setAdapter(adapter);
+                    if (getActivity() != null) {
+                        WeatherList adapter =new WeatherList(getActivity(),wList);
+                        listViewWeather.setAdapter(adapter);
+                    }
+
 
                 }
             }
