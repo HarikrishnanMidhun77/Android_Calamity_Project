@@ -1,5 +1,6 @@
 package com.example.nexus_max.project;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -56,5 +57,11 @@ sendMsg();
         else{
             Toast.makeText(AdminCalamEntry.this,"All fields must be filled!", Toast.LENGTH_LONG).show();
         }
+    }
+    @Override
+    public void onBackPressed()
+    {
+        Intent intent = new Intent(AdminCalamEntry.this, AdminDash.class);
+        startActivity(intent);
     }
 }

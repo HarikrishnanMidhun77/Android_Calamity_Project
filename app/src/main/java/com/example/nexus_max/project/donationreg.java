@@ -65,4 +65,10 @@ Button btn_trans;
             Toast.makeText(donationreg.this,"All fields must be filled!", Toast.LENGTH_LONG).show();
         }
     }
+    @Override
+    public void onBackPressed()
+    {
+        Intent intent = new Intent(donationreg.this, Main_menu.class);
+        startActivity(intent);
+    }
 }

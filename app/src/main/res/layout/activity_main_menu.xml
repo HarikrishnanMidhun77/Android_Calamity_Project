@@ -17,25 +17,25 @@
             android:orientation="horizontal"
             android:layout_weight="1"
            >
+
             <Button
                 android:id="@+id/btn_main_msg"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
 
                 android:layout_weight="1"
-                android:background="#fe124406"
+                android:background="@color/btn_color"
                 android:text="Message"
-                android:textColor="#ffffff"
-                />
+                android:textColor="#ffffff" />
+
             <Button
                 android:id="@+id/btn_main_prec"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:background="#fe124406"
-                android:text="Precautions"
                 android:layout_weight="1"
-                android:textColor="#ffffff"
-               />
+                android:background="@color/btn_color"
+                android:text="Precautions"
+                android:textColor="#ffffff" />
 
 
         </LinearLayout>
@@ -51,20 +51,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="#fe124406"
+                android:background="@color/notif_color"
                 android:text="Camp"
-                android:textColor="#ffffff"
-                />
+                android:textColor="#ffffff" />
 
             <Button
                 android:id="@+id/btn_main_notif"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="#fe124406"
+                android:background="@color/notif_color"
                 android:text="Notifications"
-                android:textColor="#ffffff"
-                />
+                android:textColor="#ffffff" />
 
 
         </LinearLayout>
@@ -81,20 +79,18 @@
                 android:layout_height="match_parent"
 
                 android:layout_weight="1"
-                android:background="#fe124406"
+                android:background="@color/btn_color"
                 android:text="Feedback"
-                android:textColor="#ffffff"
-                />
+                android:textColor="#ffffff" />
 
             <Button
                 android:id="@+id/btn_main_logout"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="#fe124406"
+                android:background="@color/btn_color"
                 android:text="Logout"
-                android:textColor="#ffffff"
-                />
+                android:textColor="#ffffff" />
         </LinearLayout>
 
     </LinearLayout>

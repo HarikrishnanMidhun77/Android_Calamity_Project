@@ -47,9 +47,10 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="39dp"
-        android:background="#fe124406"
+
+        android:background="@color/btn_color"
+        android:textColor="@color/txt_color_white"
         android:text="SEND"
-        android:textColor="@android:color/background_light"
         android:textStyle="bold|italic" />
 
 </RelativeLayout>

@@ -81,4 +81,10 @@ public class Reply extends AppCompatActivity {
             Toast.makeText(Reply.this,"All fields must be filled!", Toast.LENGTH_LONG).show();
         }
     }
+    @Override
+    public void onBackPressed()
+    {
+        Intent intent = new Intent(Reply.this, messages.class);
+        startActivity(intent);
+    }
 }

@@ -85,9 +85,9 @@
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="35dp"
         android:layout_marginEnd="0dp"
-        android:background="#fe124406"
         android:text="SIGN IN"
-        android:textColor="@android:color/background_light"
+        android:background="@color/btn_color"
+        android:textColor="@color/txt_color_white"
         android:textStyle="bold|italic" />
 
     <EditText

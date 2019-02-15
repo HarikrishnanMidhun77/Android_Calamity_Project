@@ -41,8 +41,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15sp"
-            android:paddingEnd="10sp"
-            android:paddingStart="15sp"
+            android:background="@color/btn_color"
+            android:textColor="@color/txt_color_white"
             android:text="Submit" />
     </LinearLayout>
 

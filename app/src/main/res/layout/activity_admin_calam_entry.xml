@@ -54,6 +54,8 @@
             android:id="@+id/btn_aCalam_submit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/btn_color"
+            android:textColor="@color/txt_color_white"
             android:layout_weight="1"
             android:text="Submit" />
     </LinearLayout>

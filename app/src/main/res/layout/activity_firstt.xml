@@ -7,103 +7,157 @@
     tools:context=".firstt">
 
 
-    <Button
-        android:id="@+id/btn_forg_pswd"
-        android:layout_width="379dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="19dp"
-        android:background="#fe124406"
-        android:text="FORGOT PASSWORD"
-        android:textColor="#e21f1f"
-        android:textStyle="bold|italic" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_rel_camp"
-        android:layout_width="194dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="92dp"
-        android:background="#fe124406"
-        android:text="Relief Camp"
-        android:textColor="@android:color/background_light"
-        android:textStyle="bold|italic" />
 
-    <Button
-        android:id="@+id/btn_don"
-        android:layout_width="194dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/btn_rel_camp"
-        android:background="#fe124406"
-        android:text="Donation"
-        android:textColor="@android:color/background_light"
-        android:textStyle="bold|italic" />
 
-    <Button
-        android:id="@+id/btn_cr8acc"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15sp"
+            android:paddingEnd="10sp"
+            android:paddingStart="15sp"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:text="E-MAIL:"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <EditText
+                android:id="@+id/et_uname_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_weight="2"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15sp"
+            android:paddingEnd="10sp"
+            android:paddingStart="15sp"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/textView33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PASSWORD:"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_upswd_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:ems="10"
+                android:inputType="textPassword" />
+        </LinearLayout>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="160dp"
-        android:background="#fe124406"
-        android:text="CREATE NEW ACCOUNT"
-        android:textColor="#e3d72a"
-        android:textStyle="bold|italic" />
 
-    <Button
-        android:id="@+id/btn_user_login"
-        android:layout_width="379dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_user_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+            android:layout_weight="1"
+            android:background="#00796B"
+            android:text="LOG IN"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold|italic" />
+
+        <Button
+            android:id="@+id/btn_cr8acc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+            android:background="#00796B"
+            android:text="CREATE NEW ACCOUNT"
+            android:textColor="#e3d72a"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
-        android:background="#fe124406"
-        android:text="LOG IN"
-        android:textColor="@android:color/background_light"
-        android:textStyle="bold|italic" />
+        android:orientation="horizontal"
+        android:layout_marginTop="15sp"
+        android:weightSum="2">
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="134dp"
-        android:layout_height="42dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="43dp"
-        android:text="E-MAIL"
-        android:textSize="18sp"
-        android:textStyle="italic" />
+        <Button
+            android:id="@+id/btn_rel_camp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#00796B"
+            android:text="Relief Camp"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold|italic" />
 
-    <TextView
-        android:id="@+id/textView33"
-        android:layout_width="137dp"
-        android:layout_height="42dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/textView6"
-        android:layout_marginTop="149dp"
-        android:text="PASSWORD  : "
-        android:textSize="18sp" />
+        <Button
+            android:id="@+id/btn_don"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#00796B"
+            android:text="Donation"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/et_upswd_login"
-        android:layout_width="196dp"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView33"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="19dp"
-        android:ems="10"
-        android:inputType="textPassword" />
+            <Button
+                android:id="@+id/btn_forg_pswd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                android:background="#00796B"
+                android:text="FORGOT PASSWORD"
+                android:textColor="#ffffff"
+                android:textStyle="bold|italic" />
 
-    <EditText
-        android:id="@+id/et_uname_login"
-        android:layout_width="194dp"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView6"
-        android:layout_marginStart="22dp"
-        android:layout_toEndOf="@+id/textView6"
-        android:ems="10"
-        android:inputType="textPersonName" />
+            <Button
+                android:id="@+id/btn_EmCall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_forg_pswd"
+                android:layout_marginBottom="19dp"
+                android:layout_marginTop="15sp"
+                android:background="@color/btn_color_red"
+                android:text="Emergency Call"
+                android:textColor="@color/txt_color_white"
+                android:textStyle="bold|italic" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
 </RelativeLayout>

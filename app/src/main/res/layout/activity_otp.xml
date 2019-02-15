@@ -8,16 +8,20 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="307dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="10sp"
+        android:paddingBottom="10sp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="33dp"
+      android:gravity="center"
         android:layout_marginTop="53dp"
+        android:background="@color/notif_color"
+        android:textColor="@color/txt_color_white"
         android:text="Your OTP will be automatically read"
-        android:textColor="#fef72316"
-        android:textSize="30sp"
-        android:textStyle="normal|italic" />
+
+        android:textSize="20sp"
+        />
 
     <EditText
         android:id="@+id/et_otp_otp"
@@ -38,9 +42,10 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="153dp"
-        android:background="#fe124406"
+
         android:text="DONE"
-        android:textColor="#f1f1da2a"
+        android:background="@color/btn_color"
+        android:textColor="@color/txt_color_white"
         android:textStyle="bold|italic" />
 
     <Button
@@ -49,9 +54,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignTop="@+id/btn_otp_done"
-        android:background="#fe124406"
+        android:background="@color/btn_color"
+        android:textColor="@color/txt_color_white"
         android:text="CANCEL"
-        android:textColor="@android:color/background_light"
         android:textStyle="bold|italic" />
 
     <Button
@@ -61,9 +66,9 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="50dp"
-        android:background="#fe124406"
+        android:background="@color/btn_color"
+        android:textColor="@color/txt_color_white"
         android:text="RESEND"
-        android:textColor="#fef72316"
         android:textStyle="bold|italic" />
 
     <ImageButton

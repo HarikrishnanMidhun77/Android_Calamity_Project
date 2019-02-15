@@ -1,5 +1,6 @@
 package com.example.nexus_max.project;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -48,5 +49,11 @@ ListView msgListView;
 
             }
         });
+    }
+    @Override
+    public void onBackPressed()
+    {
+        Intent intent = new Intent(messages.this, Main_menu.class);
+        startActivity(intent);
     }
 }

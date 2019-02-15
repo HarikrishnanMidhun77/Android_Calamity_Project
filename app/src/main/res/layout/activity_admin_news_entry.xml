@@ -58,6 +58,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1.5"
+            android:background="@color/btn_color"
+            android:textColor="@color/txt_color_white"
             android:text="Submit" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

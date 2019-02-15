@@ -1,5 +1,6 @@
 package com.example.nexus_max.project;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -56,4 +57,11 @@ public class AdminAlertEntry extends AppCompatActivity {
             Toast.makeText(AdminAlertEntry.this,"All fields must be filled!", Toast.LENGTH_LONG).show();
         }
     }
-}
+    @Override
+    public void onBackPressed()
+    {
+        Intent intent = new Intent(AdminAlertEntry.this, AdminDash.class);
+        startActivity(intent);
+    }
+
+    }

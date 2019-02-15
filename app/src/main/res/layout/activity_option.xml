@@ -8,14 +8,15 @@
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:gravity="center"
         android:layout_marginTop="23dp"
-        android:background="#fe124406"
         android:text="MESSAGES"
-        android:textColor="@android:color/background_light"
+        android:background="@color/btn_color"
+        android:textColor="@color/txt_color_white"
         android:textSize="24sp"
         android:textStyle="bold|italic" />
 
@@ -75,9 +76,9 @@
         android:layout_alignStart="@+id/textView11"
         android:layout_marginBottom="96dp"
         android:layout_marginStart="-11dp"
-        android:background="#fe124406"
+        android:background="@color/btn_color"
+        android:textColor="@color/txt_color_white"
         android:text="SEND"
-        android:textColor="#f3e810"
         android:textStyle="bold|italic" />
 
     <Button
@@ -86,9 +87,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignTop="@+id/btn_msg_send"
-        android:background="#fe124406"
+        android:background="@color/btn_color"
+        android:textColor="@color/txt_color_white"
         android:text="SHOW"
-        android:textColor="@android:color/background_light"
         android:textStyle="bold|italic" />
 
     <Button

@@ -17,25 +17,24 @@
             android:orientation="horizontal"
             android:layout_weight="1"
             >
+
             <Button
                 android:id="@+id/btn_aDash_camp"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-
+                android:background="@color/btn_color"
                 android:layout_weight="1"
-                android:background="#fe124406"
                 android:text="Camp"
-                android:textColor="#ffffff"
-                />
+                android:textColor="#ffffff" />
+
             <Button
                 android:id="@+id/btn_aDash_prec"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:background="#fe124406"
-                android:text="Precautions"
                 android:layout_weight="1"
-                android:textColor="#ffffff"
-                />
+                android:background="@color/btn_color"
+                android:text="Precautions"
+                android:textColor="#ffffff" />
 
 
         </LinearLayout>
@@ -44,7 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:weightSum="3"
+            android:weightSum="4"
             android:layout_weight="1">
 
             <Button
@@ -52,30 +51,36 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#fe124406"
+                android:background="@color/notif_color"
                 android:text="Weather"
-                android:textColor="#ffffff"
-                />
+                android:textColor="#ffffff" />
 
             <Button
                 android:id="@+id/btn_aDash_news"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#fe124406"
+                android:background="@color/notif_color"
                 android:text="News"
-                android:textColor="#ffffff"
-                />
+                android:textColor="#ffffff" />
+
             <Button
                 android:id="@+id/btn_aDash_alert"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#fe124406"
+                android:background="@color/notif_color"
                 android:text="Alert"
-                android:textColor="#ffffff"
-                />
+                android:textColor="#ffffff" />
 
+            <Button
+                android:id="@+id/btn_aDash_EmCall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/notif_color"
+                android:text="Emergency Calls"
+                android:textColor="#ffffff" />
 
         </LinearLayout>
 
@@ -91,20 +96,18 @@
                 android:layout_height="match_parent"
 
                 android:layout_weight="1"
-                android:background="#fe124406"
+                android:background="@color/btn_color"
                 android:text="Feedback"
-                android:textColor="#ffffff"
-                />
+                android:textColor="#ffffff" />
 
             <Button
                 android:id="@+id/btn_aDash_logout"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="#fe124406"
+                android:background="@color/btn_color"
                 android:text="Logout"
-                android:textColor="#ffffff"
-                />
+                android:textColor="#ffffff" />
         </LinearLayout>
 
     </LinearLayout>

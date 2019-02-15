@@ -1,5 +1,6 @@
 package com.example.nexus_max.project;
 
+import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -177,5 +178,11 @@ public class Notif extends AppCompatActivity {
 
            }
         }
+    }
+    @Override
+    public void onBackPressed()
+    {
+        Intent intent = new Intent(Notif.this, Main_menu.class);
+        startActivity(intent);
     }
 }
