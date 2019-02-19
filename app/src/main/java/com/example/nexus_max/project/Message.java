@@ -1,21 +1,24 @@
 package com.example.nexus_max.project;
 
 public class Message {
-public String mid,loc,to_phno,uname,calam,from_email;
+public String mid,loc,to_phno,uname,calam,from_email,imgPath;
 public Message(){
 
 }
 
-    public Message(String mid,String loc, String to_phno, String uname, String calam, String from_email) {
+    public Message(String mid,String loc, String to_phno, String uname, String calam, String from_email,String imgPath) {
         this.mid = mid;
         this.loc = loc;
         this.to_phno = to_phno;
         this.uname = uname;
         this.calam = calam;
         this.from_email = from_email;
+        this.imgPath=imgPath;
     }
 
-
+    public String getImgPath() {
+        return imgPath;
+    }
     public String getMid() {
         return mid;
     }

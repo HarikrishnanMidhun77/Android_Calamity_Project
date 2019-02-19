@@ -40,6 +40,7 @@ public class MsgList extends ArrayAdapter<Message> {
         Button btn_reply=(Button)listViewItem.findViewById(R.id.btn_mlo_reply);
         Button btn_share=(Button)listViewItem.findViewById(R.id.btn_mlo_share);
         Button btn_prec=(Button)listViewItem.findViewById(R.id.btn_mlo_prec);
+        Button btn_img=(Button)listViewItem.findViewById(R.id.btn_mlo_img);
 
          message=msgList.get(position);
         txt_phno.setText(message.getTo_phno());
@@ -75,6 +76,15 @@ public class MsgList extends ArrayAdapter<Message> {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, PrecTitles.class);
+                context.startActivity(intent);
+            }
+        });
+
+        btn_img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, ShowMsgImg.class);
+                intent.putExtra("img_path",message.getImgPath());
                 context.startActivity(intent);
             }
         });

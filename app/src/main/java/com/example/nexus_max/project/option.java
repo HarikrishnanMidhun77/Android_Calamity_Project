@@ -50,7 +50,7 @@ public class option extends AppCompatActivity {
  ImageButton loc,cam;
  DatabaseReference dbMsg;
     Geocoder geocoder;
- String imgName="123",locFind="Thrissur";
+ String imgName="123",locFind="Thrissur",imgPath="images/noimg.jpg";
     String mCurrentPhotoPath="";
     Uri pic;
     List<Address> addresses;
@@ -210,7 +210,7 @@ public class option extends AppCompatActivity {
 
         if(notEmpty(loc) && notEmpty(to_phno) && notEmpty(name) && notEmpty(calam) ){
             String uid=dbMsg.push().getKey();
-            Message msg=new Message(uid,loc,to_phno,name,calam,getMyEmail());
+            Message msg=new Message(uid,loc,to_phno,name,calam,getMyEmail(),imgPath);
             dbMsg.child(uid).setValue(msg);
             Toast.makeText(option.this,"Message sent !",Toast.LENGTH_LONG).show();
         }
@@ -265,7 +265,7 @@ public class option extends AppCompatActivity {
         //Uri file = Uri.fromFile(new File(pic.toString()));
         Uri file = Uri.fromFile(new File(mCurrentPhotoPath));
         StorageReference riversRef = mStorageRef.child("images/"+imgName);
-
+        imgPath="images/"+imgName;
         riversRef.putFile(file)
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
@@ -312,5 +312,10 @@ public class option extends AppCompatActivity {
         }
         return null;
     }
-
+    @Override
+    public void onBackPressed()
+    {
+        Intent intent = new Intent(option.this, Main_menu.class);
+        startActivity(intent);
+    }
 }
