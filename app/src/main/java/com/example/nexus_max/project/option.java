@@ -1,6 +1,11 @@
 package com.example.nexus_max.project;
 
+import android.content.Context;
 import android.content.Intent;
+import android.location.Address;
+import android.location.Geocoder;
+import android.location.Location;
+import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Environment;
 import android.os.Handler;
@@ -18,6 +23,8 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -33,6 +40,8 @@ import java.io.IOException;
 import java.net.URI;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
+import java.util.Locale;
 
 public class option extends AppCompatActivity {
  EditText et_loc,et_phno,et_name;
@@ -40,10 +49,13 @@ public class option extends AppCompatActivity {
  Button btn_send,btn_show,btn_call;
  ImageButton loc,cam;
  DatabaseReference dbMsg;
- String imgName="123",imgPath="";
-    String mCurrentPhotoPath;
+    Geocoder geocoder;
+ String imgName="123",locFind="Thrissur";
+    String mCurrentPhotoPath="";
     Uri pic;
+    List<Address> addresses;
     private StorageReference mStorageRef;
+    private FusedLocationProviderClient mFusedLocationClient;
 
     static final int REQUEST_TAKE_PHOTO = 1;
     static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -52,6 +64,13 @@ public class option extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_option);
         mStorageRef = FirebaseStorage.getInstance().getReference();
+        mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+
+
+
+        geocoder = new Geocoder(this, Locale.getDefault());
+
+
 
 
         et_loc=(EditText)findViewById(R.id.et_msg_loc);
@@ -63,6 +82,43 @@ public class option extends AppCompatActivity {
         btn_call=(Button)findViewById(R.id.btn_msg_call) ;
         loc=(ImageButton) findViewById(R.id.imgLocShare) ;
         cam=(ImageButton) findViewById(R.id.imgCam) ;
+
+
+        try {
+
+
+            mFusedLocationClient.getLastLocation()
+                    .addOnSuccessListener(this, new OnSuccessListener<Location>() {
+                        @Override
+                        public void onSuccess(Location location) {
+                            // Got last known location. In some rare situations this can be null.
+                            if (location != null) {
+                                // Logic to handle location object
+                                try {
+                                    addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
+                                    locFind = addresses.get(0).getLocality();
+                                }catch(IOException e){
+                                    Toast.makeText(option.this,"Device GPS error!", Toast.LENGTH_LONG).show();
+                                }
+                            }
+                            else{
+                                Toast.makeText(option.this,"Device GPS error!", Toast.LENGTH_LONG).show();
+                            }
+                        }
+                    });
+
+        }
+        catch (SecurityException e){
+             Toast.makeText(option.this,"Permission Denied for location!", Toast.LENGTH_LONG).show();
+        }
+
+
+        loc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                et_loc.setText(locFind);
+            }
+        });
 
         cam.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -233,6 +289,28 @@ public class option extends AppCompatActivity {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
          uploadPic();
         }
+    }
+    public static Location getLastKnownLoaction(boolean enabledProvidersOnly, Context context){
+        LocationManager manager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
+        Location utilLocation = null;
+
+        try {
+            List<String> providers = manager.getProviders(enabledProvidersOnly);
+
+            for (String provider : providers) {
+
+
+                utilLocation = manager.getLastKnownLocation(provider);
+                if (utilLocation != null) return utilLocation;
+            }
+        }
+        catch (SecurityException e){
+           // Toast.makeText(option.this,"Permission Denied!", Toast.LENGTH_LONG).show();
+        }
+        catch (NullPointerException e){
+            e.printStackTrace();
+        }
+        return null;
     }
 
 }
