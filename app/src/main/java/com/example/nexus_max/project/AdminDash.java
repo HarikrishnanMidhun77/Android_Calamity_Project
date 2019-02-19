@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class AdminDash extends AppCompatActivity {
-Button camp,prec,weath,news,alert,feedb,logout;
+Button camp,prec,weath,news,alert,feedb,logout,btn_em;
     boolean doubleBackToExitPressedOnce = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,8 @@ Button camp,prec,weath,news,alert,feedb,logout;
         alert=(Button)findViewById(R.id.btn_aDash_alert);
         feedb=(Button)findViewById(R.id.btn_aDash_feedb);
         logout=(Button)findViewById(R.id.btn_aDash_logout);
+        btn_em=(Button)findViewById(R.id. btn_aDash_EmCall);
+
 
         camp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,6 +75,14 @@ Button camp,prec,weath,news,alert,feedb,logout;
                 Intent intent = new Intent(AdminDash.this, firstt.class);
                 startActivity(intent);
 
+            }
+        });
+
+        btn_em.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AdminDash.this, AdminEmCallEntry.class);
+                startActivity(intent);
             }
         });
     }

@@ -68,7 +68,7 @@ Button btn_trans;
     @Override
     public void onBackPressed()
     {
-        Intent intent = new Intent(donationreg.this, Main_menu.class);
+        Intent intent = new Intent(donationreg.this, firstt.class);
         startActivity(intent);
     }
 }

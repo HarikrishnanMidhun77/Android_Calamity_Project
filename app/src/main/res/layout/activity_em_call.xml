@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".forgotpass">
+    tools:context=".AdminEmCallEntry">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,23 +13,34 @@
         android:gravity="center">
 
         <EditText
-            android:id="@+id/et_fp_email"
+            android:id="@+id/et_em_office"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Enter Email ID"
+            android:hint="Office"
             android:paddingEnd="10sp"
             android:paddingStart="15sp"
-            android:inputType="textEmailAddress"
+            android:inputType="textPersonName"
             android:text="" />
 
-
-
-        <Button
-            android:id="@+id/btn_fp_sub"
+        <EditText
+            android:id="@+id/et_em_phno"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30sp"
+            android:hint="Phone Number"
+            android:paddingEnd="10sp"
+            android:paddingStart="15sp"
+            android:ems="10"
+            android:layout_marginTop="15sp"
+
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <Button
+            android:id="@+id/btn_em_sub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
             android:paddingEnd="10sp"
             android:background="@color/btn_color"
             android:textColor="@color/txt_color_white"
@@ -37,5 +48,4 @@
             android:text="Submit" />
     </LinearLayout>
 
-
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

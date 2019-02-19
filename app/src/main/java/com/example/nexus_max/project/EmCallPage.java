@@ -1,6 +1,5 @@
 package com.example.nexus_max.project;
 
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,32 +14,33 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DonView extends AppCompatActivity {
-    ListView donListView;
-    DatabaseReference dbDon;
-    List<Donation> dList;
+public class EmCallPage extends AppCompatActivity {
+    ListView listViewEm;
+    DatabaseReference dbEm;
+    List<EmergencyCall> wList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_don_view);
+        setContentView(R.layout.activity_em_call_page);
 
-        dList=new ArrayList<>();
-        donListView=(ListView)findViewById(R.id.ls_don);
-        dbDon= FirebaseDatabase.getInstance().getReference("Donations");
+        wList=new ArrayList<>();
+        listViewEm=(ListView)findViewById(R.id.ls_em_call);
+        dbEm= FirebaseDatabase.getInstance().getReference("EmergencyPhones");
     }
 
+
     @Override
-    protected void onStart() {
+    public void onStart() {
         super.onStart();
-        dbDon.addValueEventListener(new ValueEventListener() {
+        dbEm.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                dList.clear();
+                wList.clear();
                 for(DataSnapshot msgSnap:dataSnapshot.getChildren()){
-                    Donation msg=msgSnap.getValue(Donation.class);
-                    dList.add(msg);
-                    DonList adapter =new DonList(DonView.this,dList);
-                    donListView.setAdapter(adapter);
+                    EmergencyCall msg=msgSnap.getValue(EmergencyCall.class);
+                    wList.add(msg);
+                        EmList adapter =new EmList(EmCallPage.this,wList);
+                        listViewEm.setAdapter(adapter);
 
                 }
             }
@@ -51,10 +51,5 @@ public class DonView extends AppCompatActivity {
             }
         });
     }
-    @Override
-    public void onBackPressed()
-    {
-        Intent intent = new Intent(DonView.this, firstt.class);
-        startActivity(intent);
-    }
+
 }

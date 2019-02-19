@@ -27,7 +27,7 @@ public class firstt extends AppCompatActivity {
     Button btn_signup;
     Button btn_rel_camp;
     Button btn_don;
-    Button btn_forg_pswd;
+    Button btn_forg_pswd,btn_emC;
     EditText user_name_login;
     EditText user_password_login;
     boolean doubleBackToExitPressedOnce = false;
@@ -44,11 +44,19 @@ public class firstt extends AppCompatActivity {
         btn_don=(Button)findViewById(R.id.btn_don) ;
         btn_forg_pswd=(Button)findViewById(R.id.btn_forg_pswd) ;
         user_login_btn= (Button)findViewById(R.id.btn_user_login);
+        btn_emC=(Button)findViewById(R.id.btn_EmCall);
 
         user_name_login=(EditText)findViewById(R.id.et_uname_login);
         user_password_login=(EditText)findViewById(R.id.et_upswd_login);
 
 
+      btn_emC.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View v) {
+              Intent intent = new Intent(firstt.this, EmCallPage.class);
+              startActivity(intent);
+          }
+      });
 
 btn_signup.setOnClickListener(new View.OnClickListener() {
     @Override
@@ -73,7 +81,8 @@ btn_don.setOnClickListener(new View.OnClickListener() {
 btn_forg_pswd.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-
+        Intent intent = new Intent(firstt.this, forgotpass.class);
+        startActivity(intent);
     }
 });
         user_login_btn.setOnClickListener(new View.OnClickListener() {
@@ -116,6 +125,8 @@ btn_forg_pswd.setOnClickListener(new View.OnClickListener() {
 
 
 
+
+
     }
 
     @Override
@@ -123,6 +134,10 @@ btn_forg_pswd.setOnClickListener(new View.OnClickListener() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser!=null){
+            Intent intent = new Intent(firstt.this, Main_menu.class);
+            startActivity(intent);
+        }
         //updateUI(currentUser);
     }
     @Override

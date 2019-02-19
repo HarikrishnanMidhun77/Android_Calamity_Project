@@ -17,16 +17,35 @@
             android:orientation="horizontal"
             android:layout_weight="1"
            >
-
-            <Button
-                android:id="@+id/btn_main_msg"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-
+                android:orientation="vertical"
+                android:weightSum="2"
                 android:layout_weight="1"
-                android:background="@color/btn_color"
-                android:text="Message"
-                android:textColor="#ffffff" />
+
+                >
+                <Button
+                    android:id="@+id/btn_main_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_weight="1"
+                    android:background="@color/btn_color"
+                    android:text="Message"
+                    android:textColor="#ffffff" />
+                <Button
+                    android:id="@+id/btn_main_rep"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_weight="1"
+                    android:background="@color/btn_color"
+                    android:text="Replies"
+                    android:textColor="#ffffff" />
+
+            </LinearLayout>
+
 
             <Button
                 android:id="@+id/btn_main_prec"
