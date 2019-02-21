@@ -57,14 +57,14 @@
         android:textStyle="italic" />
 
     <Button
-        android:id="@+id/button24"
+        android:id="@+id/btnCampReg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="21dp"
         android:layout_marginEnd="0dp"
-        android:background="#fe124406"
+        android:background="@color/btn_color"
         android:text="REGISTER"
         android:textColor="@android:color/background_light"
         android:textStyle="bold|italic" />
@@ -78,6 +78,7 @@
         android:layout_marginEnd="17dp"
         android:layout_marginTop="17dp"
         android:ems="10"
+        android:textColor="#ffffff"
         android:hint="E-mail or phone no:"
         android:inputType="textPersonName" />
 
@@ -87,6 +88,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView30"
         android:layout_alignStart="@+id/editText31"
+        android:textColor="#ffffff"
         android:ems="10"
         android:inputType="textPersonName" />
 
@@ -96,6 +98,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView31"
         android:layout_alignStart="@+id/editText31"
+        android:textColor="#ffffff"
         android:ems="10"
         android:inputType="textPassword" />
 
@@ -106,6 +109,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignTop="@+id/textView32"
         android:layout_marginEnd="24dp"
+        android:textColor="#ffffff"
         android:ems="10"
         android:hint="postal address"
         android:inputType="textMultiLine" />

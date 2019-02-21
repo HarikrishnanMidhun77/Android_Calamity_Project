@@ -7,20 +7,29 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        >
+        android:weightSum="3">
 
         <TextView
-            android:id="@+id/txt_rep_name"
+            android:id="@+id/txt_fb_from"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingTop="10sp"
+            android:paddingBottom="10sp"
+            android:layout_weight="1"
+            android:paddingLeft="10sp"
             android:textSize="20sp"
             android:text="TextView" />
-
-        <TextView
-            android:id="@+id/txt_rep_msg"
+        <EditText
+            android:id="@+id/et_fb_msg"
             android:layout_width="match_parent"
-            android:layout_height="100sp"
-            android:text="TextView" />
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:paddingTop="10sp"
+            android:paddingBottom="10sp"
+            android:background="@null"
+            android:layout_marginTop="10sp"
+            android:inputType="none"
+            android:editable="false"/>
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

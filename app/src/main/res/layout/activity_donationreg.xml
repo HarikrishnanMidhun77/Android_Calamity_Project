@@ -90,6 +90,7 @@
         android:textStyle="bold|italic"
         android:visibility="visible" />
 
+
     <EditText
         android:id="@+id/et_don_name"
         android:layout_width="177dp"
@@ -134,5 +135,13 @@
         android:layout_centerVertical="true"
         android:ems="10"
         android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btn_view_don"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/btn_don_trans"
+        android:text="View Donators" />
 
 </RelativeLayout>

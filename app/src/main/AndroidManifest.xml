@@ -16,7 +16,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -52,10 +52,10 @@
         <activity android:name=".newsadmin" />
         <activity android:name=".alertadmin" />
         <activity android:name=".campreg" />
-        <activity android:name=".campstatus" />
+        <activity android:name=".CampStatusEntry" />
         <activity android:name=".forgotpass" />
         <activity android:name=".PASSWO" />
-        <activity android:name=".feedback" />
+        <activity android:name=".FeedbackPage" />
         <activity android:name=".camplogin" />
         <activity android:name=".otp" />
         <activity android:name=".firstt" />
@@ -75,7 +75,11 @@
         <activity android:name=".AdminEmCallEntry" />
         <activity android:name=".EmCallPage" />
         <activity android:name=".ReplyPage" />
-        <activity android:name=".ShowMsgImg"></activity>
+        <activity android:name=".ShowMsgImg" />
+        <activity android:name=".FeedbackView" />
+        <activity android:name=".CampSearch" />
+        <activity android:name=".CampSearchResult" />
+        <activity android:name=".CampStatusView"></activity>
     </application>
 
 </manifest>

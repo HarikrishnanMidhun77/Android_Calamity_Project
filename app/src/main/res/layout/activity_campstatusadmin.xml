@@ -4,54 +4,75 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".campstatus">
+    tools:context=".CampStatusEntry">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="20sp">
 
-    <TextView
-        android:id="@+id/textView35"
-        android:layout_width="88dp"
-        android:layout_height="39dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="244dp"
-        android:text="STATUS:"
-        android:textColor="#fe124406"
-        android:textSize="18sp"
-        android:textStyle="italic" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="20sp">
+        <EditText
+            android:id="@+id/etCampId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginBottom="30sp"
+            android:inputType="textPersonName"
+            android:hint="Camp Id" />
+        <EditText
+            android:id="@+id/etItemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginBottom="30sp"
+            android:inputType="textPersonName"
+            android:hint="Item Name" />
 
-    <EditText
-        android:id="@+id/editText36"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView36"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="13dp"
-        android:ems="10"
-        android:inputType="textPersonName" />
+        <TextView
+            android:id="@+id/textView35"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20sp"
+            android:text="Enter Status" />
 
-    <Button
-        android:id="@+id/button27"
-        android:layout_width="382dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="24dp"
-        android:background="#fe124406"
-        android:text="ENTER"
-        android:textColor="@android:color/background_light"
-        android:textStyle="bold|italic" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/textView36"
-        android:layout_width="111dp"
-        android:layout_height="41dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="129dp"
-        android:text="ITEM  :"
-        android:textColor="#fe124406"
-        android:textSize="18sp"
-        android:textStyle="italic" />
+            <Button
+                android:id="@+id/btn_low"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Low" />
 
+            <Button
+                android:id="@+id/btn_med"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="medium" />
+
+            <Button
+                android:id="@+id/btn_high"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:text="High" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_sub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit" />
+    </LinearLayout>
+    </LinearLayout>
 </RelativeLayout>

@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".feedback">
+    tools:context=".FeedbackPage">
 
     <EditText
-        android:id="@+id/editText41"
+        android:id="@+id/et_fb_fb"
         android:layout_width="334dp"
         android:layout_height="184dp"
         android:layout_alignParentStart="true"
@@ -21,14 +21,14 @@
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/button34"
+        android:id="@+id/btn_fb_sub"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="114dp"
         android:layout_marginEnd="0dp"
-        android:background="#fe124406"
+        android:background="@color/btn_color"
         android:text="SEND"
         android:textColor="@android:color/background_light"
         android:textStyle="bold|italic" />
